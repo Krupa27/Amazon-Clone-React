@@ -2,8 +2,10 @@ import React from 'react'
 import Search from './Search'
 import {ShoppingCartIcon} from "@heroicons/react/24/outline"
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const NavBar = () => {
+    const cart=useSelector((state)=>state.cart.productsNumber)
   return (
     <header className='min-w-[1000px]'>
         <div className='flex bg-amazonclone text-white h-[60px]'>
@@ -17,9 +19,13 @@ const NavBar = () => {
                 </div>
             </div>
 
+            {/* MIDDLE */}
+
             <div className='flex grow relative items-center'>
                 <Search/>
             </div>
+
+            {/* RIGHT */}
 
             <div className='flex items-center m-4'>
                  <div className='pr-4 pl-4'>
@@ -33,6 +39,9 @@ const NavBar = () => {
                 <Link to={"/checkout"}>
                     <div className='flex pr-3 pl-3'>
                         <ShoppingCartIcon className="h-[48px]" />
+                        <div className='relative'>
+                            <div className='absolute right-[9px] font-bold m-2 text-orange-400' >{cart}</div>
+                        </div>
                         <div className='mt-7 text-xs xl:text-sm font-bold'>
                             Cart
                         </div>

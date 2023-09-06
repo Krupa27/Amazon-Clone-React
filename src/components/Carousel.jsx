@@ -24,6 +24,9 @@ const Carousel = () => {
       className="w-[100%] h-[50%]"
     >
     <SwiperSlide>
+        <img src={"../images/banner.jpg"} />
+    </SwiperSlide>
+    <SwiperSlide>
         <img src={"../images/carousel_1.jpg"} />
     </SwiperSlide>
     <SwiperSlide>

@@ -3,7 +3,7 @@ import React from 'react'
 const ProductBadge = ({badge}) => {
     if(badge === 'choice'){
         return(
-            <span className='text-xs xl:text-sm bg-slate-800 text-white p-1'>Amazon's <span>Choice</span></span>
+            <span className='text-xs xl:text-sm bg-slate-800 text-white p-1'>Amazon's <span className="text-red-500" >Choice</span></span>
         )
 
     }
@@ -16,7 +16,7 @@ const ProductBadge = ({badge}) => {
         <span className='text-xs xl:text-sm bg-red-500 text-white p-1'>Limited Time Deal</span>
     }
   return (
-    <div>ProductBadge</div>
+    <div></div>
   )
 }
 

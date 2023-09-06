@@ -48,7 +48,7 @@ const Search = () => {
                 <option>Fashion</option>
                 <option>Computers</option>
                 <option>Home</option>
-                <option>Mobiles</option>
+                <option >Mobiles</option>
             </select>
             <input className='flex grow items-center h-[100%] rounded-l text-black type="text"' value={searchTerm} onChange={(e)=>setsearchterm(e.target.value)}/>
             <button onClick={onhandlesubmit} className='w-[45px]'>
@@ -64,7 +64,7 @@ const Search = () => {
               return(
                 currentsearch && 
                 title.startsWith(currentsearch) && 
-                title != currentsearch
+                title !== currentsearch
               )
             })
             .slice(0,10)
